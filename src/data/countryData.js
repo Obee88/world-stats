@@ -1962,8 +1962,7 @@ const data = {
   "191": {
     "info": {
       "languages": [
-        "Serbo-Croatian",
-        "Slovene"
+        "Croatian"
       ],
       "national dish": "Istrian stew",
       "average temperature": {
