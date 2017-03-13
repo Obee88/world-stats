@@ -22,3 +22,6 @@ Run in development mode
 Screenshot:
 -------------
 ![react_app](https://cloud.githubusercontent.com/assets/4610139/23877967/25e22128-0845-11e7-80c3-a9f0b389eb93.png)
+
+Created by Davor Obilinovic
+Licence: MIT
