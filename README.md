@@ -1,10 +1,8 @@
 # world-stats
-======================
 
 Interactive world map implemented in React with redux and d3. Statistics by countries included.
 
 Demo: http://dobilinovic.comsysto.com/world-stats
-
 
 Screenshot:
 -------------
