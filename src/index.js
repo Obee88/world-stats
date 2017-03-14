@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Map from './components/map';
 import InfoPanel from './components/infoPanel';
+import StatisticChooser from './components/statisticChooser';
 import './index.css';
 
 
@@ -21,6 +22,7 @@ const render = () => {
       <div>
         <Map />
         <InfoPanel />
+        <StatisticChooser />
       </div>
     </Provider>
   ), document.getElementById('root'));
