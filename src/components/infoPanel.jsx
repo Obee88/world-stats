@@ -82,7 +82,7 @@ const InfoPanel = ({ selectedCountryId }) => {
 
                   { countryData.info.costline &&
                     <tr>
-                      <td className="InfoKey" >Costline:</td>
+                      <td className="InfoKey" >Coastline:</td>
                       <td className="InfoValue"><NumberFormater number={countryData.info['costline']} /> km</td>
                     </tr> }
 

@@ -5,6 +5,7 @@ import world from '../data/countries.js';
 import * as topojson from 'topojson';
 import './map.css';
 import { getCountryData } from '../data/countryData.js';
+import { calculateColor } from '../data/statistics.js'
 
 class Map extends React.Component {
   constructor(props) {
@@ -18,6 +19,15 @@ class Map extends React.Component {
 
   componentDidMount() {
     this.renderSvg();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { selectedStatistic } = nextProps;
+    const countryes = d3.selectAll(".country")
+      .style("fill",(object,i,all) => {
+        const color = calculateColor(selectedStatistic, object.id);
+        return color;
+      });
   }
 
   renderSvg() {
@@ -65,12 +75,12 @@ class Map extends React.Component {
     const self = this;
     const highlights = d3.selectAll('.country')
       .on('mouseover', (d,i,a) => {
-        if (a[i] !== this.state.selectedState) {
+        if (this.props.selectedStatistic === 'none' && a[i] !== this.state.selectedState) {
           a[i].style.fill = 'orange';
         }
       })
       .on('mouseout', (d,i,a) => {
-        if (a[i] !== this.state.selectedState) {
+        if (this.props.selectedStatistic === 'none' && a[i] !== this.state.selectedState) {
           a[i].style.fill = 'black';  
         }
       })
@@ -114,11 +124,13 @@ class Map extends React.Component {
 
 Map.propTypes = {
   selectedStateId: PropTypes.number,
-  action: PropTypes.func,
+  countrySelected: PropTypes.func,
+  selectedStatistic: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({
   selectedStateId: state.selectedStateId,
+  selectedStatistic: state.selectedStatistic,
 });
 
 const mapDispatchToProps = (dispatch) => ({
