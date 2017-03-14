@@ -1662,7 +1662,7 @@ const data = {
     },
     "name": "Somaliland"
   },
-  "-2": {
+  "-99": {
     "info": {
       "phone prefix": "+383"
     },
