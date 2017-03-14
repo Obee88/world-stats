@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Draggable from 'react-draggable';
 import { getCountryData } from '../data/countryData.js';
 import './infoPanel.css';
+import NumberFormater from './numberFormater.jsx';
 
 const InfoPanel = ({ selectedCountryId }) => {
   const countryData = getCountryData(selectedCountryId);
@@ -70,25 +71,25 @@ const InfoPanel = ({ selectedCountryId }) => {
                   { countryData.info.population &&
                     <tr>
                       <td className="InfoKey" >Population:</td>
-                      <td className="InfoValue">{countryData.info['population']}</td>
+                      <td className="InfoValue"><NumberFormater number={countryData.info['population']} /></td>
                     </tr> }
 
                   { countryData.info['surface area'] &&
                     <tr>
                       <td className="InfoKey" >Surface area:</td>
-                      <td className="InfoValue">{countryData.info['surface area']} square km</td>
+                      <td className="InfoValue"><NumberFormater number={countryData.info['surface area']} /> square km</td>
                     </tr> }
 
                   { countryData.info.costline &&
                     <tr>
                       <td className="InfoKey" >Costline:</td>
-                      <td className="InfoValue">{countryData.info['costline']} km</td>
+                      <td className="InfoValue"><NumberFormater number={countryData.info['costline']} /> km</td>
                     </tr> }
 
                   { countryData.info.elevation &&
                     <tr>
                       <td className="InfoKey" >Elevation:</td>
-                      <td className="InfoValue">{countryData.info['elevation']}</td>
+                      <td className="InfoValue"><NumberFormater number={countryData.info['elevation']} /> m</td>
                     </tr> }
 
                   { countryData.info.languages &&
