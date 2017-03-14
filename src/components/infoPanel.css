@@ -1,7 +1,6 @@
 .InfoPanel {
   background-color: rgba(100, 200, 300, 0.9);
-  width: 600px;
-  height: 700px;
+  width: 25%;
   position: fixed;
   left: 20px;
   top: 20px;
