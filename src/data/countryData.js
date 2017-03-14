@@ -4758,7 +4758,11 @@ const data = {
       "phone prefix": "+242",
       "continent": "Africa",
       "surface area": 342000.0,
-      "independent since": 1960
+      "independent since": 1960,
+      "average temperature": {
+        "temperature": "24.6",
+        "measurement": "celsius"
+      }
     },
     "flag": {
       "cn_name": "",
