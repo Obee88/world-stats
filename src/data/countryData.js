@@ -2272,6 +2272,7 @@ const data = {
       "currency name": "Kazakhstan Tenge",
       "currency code": "KZT",
       "web domain": ".kz",
+      "population": 17040000,
       "average temperature": {
         "temperature": "6.40",
         "measurement": "celsius"
@@ -2330,6 +2331,7 @@ const data = {
       "phone prefix": "+33",
       "capital city": "Paris",
       "surface area": 551500.0,
+      "costline": 3400,
       "independent since": 843
     },
     "flag": {
@@ -3858,8 +3860,11 @@ const data = {
         "temperature": "-5.10",
         "measurement": "celsius"
       },
+      "population": 143500000,
       "average male height": 175.0,
-      "phone prefix": "+7"
+      "phone prefix": "+7",
+      "life expectancy": 70.46,
+      "surface area": 17100000
     },
     "flag": {
       "cn_name": "",
@@ -4431,7 +4436,8 @@ const data = {
     "name": "Bhutan"
   },
   "178": {
-    "info": {},
+    "info": {
+    },
     "flag": {
       "cn_name": "",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_the_Republic_of_the_Congo.svg",
@@ -4740,6 +4746,7 @@ const data = {
         "Sango",
         "Teke"
       ],
+      "costline": 37,
       "elevation": "430m",
       "region": "Central Africa",
       "government type": "Republic",
