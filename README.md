@@ -6,7 +6,6 @@ Demo: http://dobilinovic.comsysto.com/world-stats
 
 Screenshot:
 -------------
-![react_app](https://cloud.githubusercontent.com/assets/4610139/23877967/25e22128-0845-11e7-80c3-a9f0b389eb93.png)
 ![world_stats](https://cloud.githubusercontent.com/assets/4610139/23905557/c2128610-08cb-11e7-9d36-ccd7ce35e923.png)
 
 Instalation
