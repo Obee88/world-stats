@@ -5940,7 +5940,6 @@ const data = {
   "239": {
     "info": {
       "surface area": 3903.0,
-      "costline": "NA",
       "region": "Antarctica",
       "government type": "Dependent Territory of the UK",
       "life expectancy": null,
