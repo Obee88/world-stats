@@ -117,7 +117,7 @@ const InfoPanel = ({ selectedCountryId }) => {
                     </tr> }
                   { countryData.info['national dish'] &&
                     <tr>
-                      <td className="InfoKey" >Region:</td>
+                      <td className="InfoKey" >National dish:</td>
                       <td className="InfoValue">{countryData.info['national dish']}</td>
                     </tr> }
                 </tbody>
