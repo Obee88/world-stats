@@ -85,20 +85,21 @@ class Map extends React.Component {
         }
       })
       .on('click', (d,i,a) => {
-        if (this.props.selectedStatistic === 'none') {
-          return;
-        }
         if (self.state.selectedState === a[i]) {
           self.setState({ selectedState: null });
           self.props.countrySelected(null);
-          a[i].style.fill = 'orange';
+          if (this.props.selectedStatistic === 'none') {
+            a[i].style.fill = 'orange';
+          }
         } else {
-          if (self.state.selectedState) {
+          if (this.props.selectedStatistic === 'none' && self.state.selectedState) {
             self.state.selectedState.style.fill = 'black';
           }
           self.setState({ selectedState: a[i] });
           self.props.countrySelected(d.id);
-          a[i].style.fill = 'blue';
+          if (this.props.selectedStatistic === 'none') {
+            a[i].style.fill = 'blue';
+          }
         }
       })
 
