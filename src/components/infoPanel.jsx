@@ -52,7 +52,7 @@ const InfoPanel = ({ selectedCountryId }) => {
 
                   { countryData.info['capital city'] &&
                     <tr>
-                      <td className="InfoKey" >Capital city:</td>
+                      <td className="InfoKey" >Capital:</td>
                       <td className="InfoValue">{countryData.info['capital city']}</td>
                     </tr> }
 
@@ -64,7 +64,7 @@ const InfoPanel = ({ selectedCountryId }) => {
 
                   { countryData.info['phone prefix'] &&
                     <tr>
-                      <td className="InfoKey" >Phone prefix:</td>
+                      <td className="InfoKey" >Phone:</td>
                       <td className="InfoValue">{countryData.info['phone prefix']}</td>
                     </tr> }
 
@@ -76,7 +76,7 @@ const InfoPanel = ({ selectedCountryId }) => {
 
                   { countryData.info['surface area'] &&
                     <tr>
-                      <td className="InfoKey" >Surface area:</td>
+                      <td className="InfoKey" >Area:</td>
                       <td className="InfoValue"><NumberFormater number={countryData.info['surface area']} /> square km</td>
                     </tr> }
 
@@ -100,24 +100,24 @@ const InfoPanel = ({ selectedCountryId }) => {
 
                   { countryData.info['average temperature'] &&
                     <tr>
-                      <td className="InfoKey" >Average temperature:</td>
+                      <td className="InfoKey" >Avg temp:</td>
                       <td className="InfoValue">{countryData.info['average temperature']['temperature']} {countryData.info['average temperature']['measurement']}</td>
                     </tr> }
 
                   { countryData.info['life expectancy'] &&
                     <tr>
-                      <td className="InfoKey" >Life expectancy:</td>
+                      <td className="InfoKey" >Life duration:</td>
                       <td className="InfoValue">{countryData.info['life expectancy']}</td>
                     </tr> }
 
                   { countryData.info['average male height'] &&
                     <tr>
-                      <td className="InfoKey" >Average male height:</td>
+                      <td className="InfoKey" >Male height:</td>
                       <td className="InfoValue">{countryData.info['average male height']}m</td>
                     </tr> }
                   { countryData.info['national dish'] &&
                     <tr>
-                      <td className="InfoKey" >National dish:</td>
+                      <td className="InfoKey" >Dish:</td>
                       <td className="InfoValue">{countryData.info['national dish']}</td>
                     </tr> }
                 </tbody>
