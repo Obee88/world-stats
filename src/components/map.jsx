@@ -85,6 +85,9 @@ class Map extends React.Component {
         }
       })
       .on('click', (d,i,a) => {
+        if (this.props.selectedStatistic === 'none') {
+          return;
+        }
         if (self.state.selectedState === a[i]) {
           self.setState({ selectedState: null });
           self.props.countrySelected(null);
