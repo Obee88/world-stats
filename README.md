@@ -2,7 +2,7 @@
 
 Interactive world map implemented in React with redux and d3. Statistics by countries included.
 
-Demo: http://dobilinovic.comsysto.com/world-stats
+Demo: http://62.75.160.163/world-stats
 
 Screenshot:
 -------------
