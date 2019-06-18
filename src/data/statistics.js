@@ -1,3 +1,5 @@
+import { getCountryData } from './countryData.js';
+
 const minMax = {
   "elevation": {
     "max": 3280.0,
@@ -31,14 +33,18 @@ const minMax = {
 
 const componentToHex = (c) => {
     var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
+    return hex.length === 1 ? "0" + hex : hex;
 };
 
 const rgbToHex = (r, g, b) => {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 };
 
-import { getCountryData } from './countryData.js';
+export const getMedian = (att, val) => {
+  const max = minMax[att]['max'];
+  return val/max;
+ }
+
 export const calculateColor = (att, id) => {
   const data = getCountryData(id);
   let val = data['info'][att];
@@ -58,11 +64,6 @@ export const calculateColor = (att, id) => {
   }
   return rgbToHex(0, 0, Math.floor(55+ 200*median+100));
 }
-
-export const getMedian = (att, val) => {
-  const max = minMax[att]['max'];
-  return val/max;
- }
 
 export const getOptions = () => {
   return Object.keys(minMax);
