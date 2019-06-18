@@ -23,7 +23,7 @@ class Map extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const { selectedStatistic } = nextProps;
-    d3.selectAll(".country")
+    const countryes = d3.selectAll(".country")
       .style("fill",(object,i,all) => {
         const color = calculateColor(selectedStatistic, object.id);
         return color;
@@ -31,44 +31,46 @@ class Map extends React.Component {
   }
 
   renderSvg() {
-    const width = window.innerWidth * 0.9, height = window.innerHeight * 0.9;
+    const width = window.innerWidth * 0.9, height = window.innerHeight * 0.9; //1600, height = 1000;
+
+    // const color = d3.scale.category10();
 
     const projection = d3.geoMercator()
-      .translate([480, 300])
-      .scale(970);
+                    .translate([480, 300])
+                    .scale(970);
 
     const path = d3.geoPath()
-      .projection(projection);
-
-    const svg = d3.select(".world-map")
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .style("margin-top", window.innerHeight * 0.05)
-      .style("margin-left", window.innerWidth * 0.05)
-      .style("background-color","#eee")
-      .call(
-        d3.zoom().on("zoom", redraw)
-      )
-      .append("g");
+        .projection(projection);
 
     const redraw = () => { 
-       svg.attr("transform",d3.event.transform);
+       svg.attr("transform",d3.event.transform);// "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
     }
+
+    const svg = d3.select(".world-map").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("margin-top", window.innerHeight * 0.05)
+    .style("margin-left", window.innerWidth * 0.05)
+    .style("background-color","#eee")
+    .call(
+      d3.zoom().on("zoom", redraw)
+    )
+    .append("g");
 
     const tooltip = d3.select("#map").append("div").attr("class", "tooltip");
     const { world } = this.state;
     const countries = topojson.feature(world, world.objects.countries).features;
+    // const neighbors = topojson.neighbors(world, countries);
     const i = -1, n = countries.length;
 
     const country = svg.selectAll(".country").data(countries);
     const poligons = country
       .enter()
       .insert("path")
-      .attr("class", "country")    
-      .attr("title", (d) => (getCountryData(d.id) ? getCountryData(d.id).name : d.id))
-      .attr("d", path)
-      .style("fill", "black");
+        .attr("class", "country")    
+        .attr("title", (d) => (getCountryData(d.id) ? getCountryData(d.id).name : d.id))
+        .attr("d", path)
+        .style("fill", "black");
 
     const self = this;
     const highlights = d3.selectAll('.country')
@@ -99,7 +101,20 @@ class Map extends React.Component {
             a[i].style.fill = 'blue';
           }
         }
-      });
+      })
+
+
+    // paths.forEach(function(p){
+    //     var pp = d3.select(p);
+    //     pp
+    //     .on("mouseover", function(d,i,a,b,c) {
+    //       pp.style("fill", "orange");
+    //     })
+    //     .on("mouseout",  function(d,i) {
+    //       pp.style("fill", "black");
+    //     });
+
+    //   })
   }
 
   
