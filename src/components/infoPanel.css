@@ -1,35 +1,35 @@
 .InfoPanel {
   background-color: rgba(100, 200, 300, 0.9);
-  width: 25%;
+  width: 25vw;
   position: fixed;
-  left: 20px;
-  top: 20px;
+  right: 2vh;
+  top: 2vh;
 
-  border: solid gray 6px;
-  border-radius: 5px;
+  border: solid gray 0.6vh;
+  border-radius: 0.5vh;
 
-  padding: 10px;
+  padding: 1vh;
 }
 
 .InfoHeader {
-  background-color: rgba(60, 160, 260, 0.7);
-  text-align: center;
-  font-family: "Times New Roman", Georgia, serif;
-  font-size: 2em;
-  vertical-align: middle;
-  line-height: 100px;
   width: 100%;
-  height: 20%;
-
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(60, 160, 260, 0.7);
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 3.5vh;
 }
 
 .InfoBody {
-  margin-top: 20px;
+  margin-top: 2vh;
+  font-size: 1.2vh;
 }
 
 .InfoKey {
   font-weight: bold;
-  width: 30%;
+  width: 8vw;
 }
 
 .InfoFlag {

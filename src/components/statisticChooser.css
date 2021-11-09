@@ -1,12 +1,12 @@
 .StatisticChooser {
   background-color: rgba(100, 200, 300, 0.9);
-  width: 300px;
+  width: 20vw;
   position: fixed;
-  left: 80%;
-  top: 80%;
+  left: 2vw;
+  top: 2vh;
 
-  border: solid gray 6px;
+  border: solid gray 0.6vh;
   border-radius: 5px;
 
-  padding: 10px;
+  padding: 1vh;
 }

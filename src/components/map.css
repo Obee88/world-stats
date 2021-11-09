@@ -8,6 +8,7 @@
   stroke: #fff;
   stroke-width: .1px;
   stroke-linejoin: round;
+  cursor: pointer;
 }
 
 .hidden { 
