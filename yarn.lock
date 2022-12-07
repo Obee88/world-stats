@@ -3879,9 +3879,9 @@ decamelize@^2.0.0:
     xregexp "4.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 deep-equal@^1.0.1:
   version "1.1.1"
@@ -9077,7 +9077,7 @@ react-redux@^7.2.6:
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
-react-scripts@1.9.5:
+react-scripts@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.2.0.tgz#58ccd6b4ffa27f1b4d2986cbdcaa916660e9e33c"
   integrity sha512-6LzuKbE2B4eFQG6i1FnTScn9HDcWBfXXnOwW9xKFPJ/E3rK8i1ufbOZ0ocKyRPxJAKdN7iqg3i7lt0+oxkSVOA==
